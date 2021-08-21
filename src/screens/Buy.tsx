@@ -97,7 +97,7 @@ function Buy({ navigation, route }: Props) {
       <DismissKeyboard>
         <Container>
           <BuyProductList products={products} />
-          <Button onPress={buy}>
+          <Button onPress={buy} disabled={products?.length === 0}>
             <Text>구매하기</Text>
           </Button>
         </Container>
